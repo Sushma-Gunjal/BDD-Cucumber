@@ -1,29 +1,28 @@
 package pageObjects;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
-import Stepdefinitions.BaseClass;
 
-public class Amazonhomepage extends BaseClass {
 
-	// WebDriver driver;
+public class AmzonHomePage extends BasePage {
+
+	
+	public AmzonHomePage()
+
+	{
+		super(driver);
+	}
+
 	By searchbox = By.xpath("//input[@id='twotabsearchtextbox']");
 	By searchButton = By.xpath("//input[@id='nav-search-submit-button']");
 	By searchresult = By.xpath("(//div[contains(@class, 's-main-slot')]//div[contains(@class, 's-result-item')])[3]");
 	By resultafterclicking = By.xpath("//span[@id='productTitle']");
 
-	public Amazonhomepage(WebDriver driver)
-
-	{
-		this.driver = driver;
-	}
-
+	
 	public void enterserchitem(String productname) {
+		driver.get("https://www.amazon.in/");
 		driver.findElement(searchbox).sendKeys(productname);
 
 	}
@@ -46,5 +45,8 @@ public class Amazonhomepage extends BaseClass {
 
 	return flag;
 
-	}
+	  
+	  
+	
+}
 }
