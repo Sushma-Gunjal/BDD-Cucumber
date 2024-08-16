@@ -10,5 +10,5 @@ Then the user is able to add it to the cart
 
   Examples:
           |Product        |
-          |Playstation 4   |
-          |Dell Laptop|
+          |Playstation 4  |
+      

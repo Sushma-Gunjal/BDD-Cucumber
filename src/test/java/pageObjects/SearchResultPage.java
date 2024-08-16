@@ -13,16 +13,12 @@ public class SearchResultPage extends BasePage {
 	
 	public SearchResultPage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	By results = By.cssSelector("div.s-main-slot div.s-result-item");
 	By firstresultitem=By.xpath("(//div[ @data-component-type='s-search-result'])[1]//h2/a");
 	
-	
-	
-	
-	
+		
 	public String isResultsDisplayed(String product) {
 		
 	boolean flag=false;
